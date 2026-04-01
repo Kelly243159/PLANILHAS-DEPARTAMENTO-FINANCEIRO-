@@ -27,9 +27,8 @@ COR_RESUMO_FONT = "0F1B2D"
 COR_BORDA = "CBD5E1"
 
 
-# ═══════════════════════════════════════════
+
 # GERADOR DE RELATÓRIO PROFISSIONAL
-# ═══════════════════════════════════════════
 
 def _gerar_relatorio(ws_origem, linhas_quitadas, mes, ano):
     wb_rel = Workbook()
@@ -190,9 +189,9 @@ def _gerar_relatorio(ws_origem, linhas_quitadas, mes, ano):
     return wb_rel
 
 
-# ═══════════════════════════════════════════
+
 # FUNÇÕES DE PROCESSAMENTO
-# ═══════════════════════════════════════════
+
 
 def processar_planilha(caminho_entrada, mes, ano):
     wb = load_workbook(caminho_entrada)
@@ -273,9 +272,9 @@ def processar_planilha_coluna_f(caminho_entrada, mes, ano):
     return saida, relatorio, len(linhas_quitadas)
 
 
-# ═══════════════════════════════════════════
+
 # COMPONENTE DE PROCESSAMENTO
-# ═══════════════════════════════════════════
+
 
 def bloco_processamento(key_prefix, descricao, funcao_processar):
     arquivo = st.file_uploader(
@@ -357,9 +356,9 @@ def bloco_processamento(key_prefix, descricao, funcao_processar):
                     os.remove(temp_path)
 
 
-# ═══════════════════════════════════════════
+
 # INTERFACE PRINCIPAL
-# ═══════════════════════════════════════════
+
 
 def main():
     st.set_page_config(
